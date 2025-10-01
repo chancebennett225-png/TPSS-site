@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Program Director</title>
+    <!-- Importing Google Fonts for the style: Montserrat (body), Playfair Display (h2), Great Vibes (script name) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-pink: #FF69B4; /* Hot Pink */
+            --secondary-pink: #FFC0CB; /* Light Pink */
+            --accent-pink: #FF1493; /* Deep Pink */
+            --text-color: #333;
+            --light-bg: #FFF0F5; /* Lavender Blush */
+            --dark-bg: #FFDAB9; /* Peach Puff */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+        }
+
+        .program-director-section {
+            width: 95%;
+            max-width: 700px; /* Compact landscape width */
+            margin: 30px auto;
+            /* Gradient background from light lavender to light pink */
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--secondary-pink) 100%);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            position: relative;
+            padding: 25px;
+            box-sizing: border-box;
+            border: 2px solid var(--primary-pink);
+        }
+
+        /* Subtle sparkle pattern overlay using SVG data URI */
+        .sparkle-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="10" cy="10" r="2" fill="%23FFC0CB" /><circle cx="30" cy="50" r="1.5" fill="%23FFC0CB" /><circle cx="70" cy="20" r="2.5" fill="%23FFC0CB" /><circle cx="90" cy="80" r="1" fill="%23FFC0CB" /><circle cx="50" cy="90" r="2" fill="%23FFC0CB" /></svg>');
+            background-size: 50px 50px;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        /* Floating diamond/rhombus accents with animation */
+        .pink-diamond {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-pink);
+            clip-path: polygon(50% 0%, 0% 50%, 50% 100%, 100% 50%);
+            opacity: 0.5;
+            filter: drop-shadow(0 0 4px var(--accent-pink));
+            animation: floatAndTwinkle 8s infinite ease-in-out;
+            z-index: 1; /* Below content but above background */
+        }
+        .pink-diamond:nth-of-type(1) { top: 5%; left: 3%; animation-delay: 0s; }
+        .pink-diamond:nth-of-type(2) { top: 80%; right: 5%; width: 30px; height: 30px; animation-delay: 2s; }
+        .pink-diamond:nth-of-type(3) { bottom: 10%; left: 50%; width: 50px; height: 50px; opacity: 0.3; animation-delay: 4s; }
+
+
+        .header-content {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-content h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--accent-pink);
+            font-size: 2.2em; 
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rose-icon {
+            width: 25px;
+            height: 25px;
+            fill: var(--primary-pink);
+            margin-right: 10px;
+        }
+
+        .script-name {
+            font-family: 'Great Vibes', cursive;
+            color: var(--accent-pink);
+            font-size: 3.8em; 
+            line-height: 1;
+            position: relative;
+            display: inline-block;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            /* NEON GLOW EFFECT ADDED */
+            text-shadow: 
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px var(--accent-pink),
+                0 0 30px var(--accent-pink),
+                0 0 40px var(--accent-pink),
+                0 0 55px var(--primary-pink),
+                0 0 70px var(--primary-pink);
+        }
+
+        .heart-accent {
+            position: absolute;
+            top: 5px;
+            left: -10px;
+            width: 25px;
+            height: 25px;
+            fill: var(--primary-pink);
+            filter: drop-shadow(0 0 2px rgba(255, 105, 180, 0.5));
+            transform: rotate(-10deg);
+        }
+
+        .content-flex {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start; /* Align columns to the top */
+            position: relative;
+            z-index: 2;
+        }
+
+        .column-left {
+            flex: 1 1 40%; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-right: 10px;
+            border-right: 1px dashed var(--secondary-pink);
+        }
+
+        .column-right {
+            flex: 1 1 60%;
+            padding-left: 10px;
+        }
+        
+        .director-profile-image {
+            width: 220px; 
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 4px solid var(--primary-pink);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .director-profile-image:hover {
+            transform: scale(1.03);
+        }
+
+        .centered-intro-text {
+            text-align: center; 
+            font-size: 0.95em;
+            color: #555;
+            margin-top: 10px;
+            padding: 0 10px;
+        }
+
+
+        .column-right h3 {
+            color: var(--accent-pink);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .column-right p {
+            font-size: 0.95em; 
+            color: #555;
+            margin-bottom: 12px;
+            text-shadow: 0 0 1px rgba(255, 105, 180, 0.2);
+        }
+
+        .pink-divider {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--primary-pink), rgba(0, 0, 0, 0));
+            margin: 15px 0;
+        }
+
+        @keyframes floatAndTwinkle {
+            0% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.5; }
+            50% { transform: translateY(-7px) rotate(7deg) scale(1.03); opacity: 0.7; }
+            100% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.5; }
+        }
+
+        /* Responsive Design: Stacks columns on smaller screens */
+        @media (max-width: 768px) {
+            .content-flex {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .column-left, .column-right {
+                flex: 1 1 100%;
+                border-right: none;
+                border-bottom: 1px dashed var(--secondary-pink);
+                padding: 0 10px 20px 10px;
+            }
+            .program-director-section {
+                max-width: 95%;
+            }
+            .script-name {
+                font-size: 3em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section id="meet-the-program-director" class="program-director-section">
+        <div class="sparkle-overlay"></div>
+        <!-- Floating diamond decorations -->
+        <div class="pink-diamond"></div>
+        <div class="pink-diamond"></div>
+        <div class="pink-diamond"></div>
+
+        <div class="header-content">
+            <h2>
+                <!-- Heart SVG icon -->
+                <svg class="rose-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                Meet Your Program Director
+            </h2>
+            <div class="script-name">
+                <svg class="heart-accent" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                Chance A. Bennett
+            </div>
+        </div>
+
+        <div class="content-flex">
+            <!-- Left Column: Image and Introductory Text -->
+            <div class="column-left">
+                <!-- Image URL updated to use direct image link format for reliability -->
+                <img src="https://i.imgur.com/ywXd0AD.jpg" alt="Program Director, Chance A. Bennett" class="director-profile-image">
+                <div class="centered-intro-text">
+                    <p>Hello, and a warm, sparkling welcome! I'm absolutely thrilled to share the heart and soul behind **The PinK School of STEM**.</p>
+                    <p>My goal is to spearhead and direct an **all-girls STEM program**, built on the belief in the significant impact proper STEM exposure imposes on a young academic experience. As a single mother of one, I'm committed to providing this education to young girls like my own daughter, inspired by witnessing firsthand the potential often lost due to a lack of resources and exposure.</p>
+                </div>
+            </div>
+
+            <!-- Right Column: Detailed Background -->
+            <div class="column-right">
+                <h3>My Background & Vision</h3>
+                <p>My vision is to impact Education beyond the classroom by mastering and innovating methods of **Curriculum Design**. I aim to develop a **universal lesson method** applicable to all subjects and learners.</p>
+
+                <hr class="pink-divider">
+
+                <p>My academic foundation is an extensive background in **Modern Biology**, including numerous research projects. This passion for Science, specifically Biology, is coupled with my creative foundation in **Fashion Design and Fashion Drawing**, which sharpened my capacity to engage and execute from a creative perspective.</p>
+
+                <hr class="pink-divider">
+
+                <p>My teaching extends to designing learning activities, providing mentorship, and utilizing data for **learner assessment** to enhance outcomes. My dedication to student-centered learning and **creative problem-solving** has been instrumental in my success providing informal teaching and curriculum development.</p>
+                
+                <hr class="pink-divider">
+
+                <p>Despite early academic setbacks, I persevered through challenges like homelessness and unemployment. My strong faith and determination led to exceptional grades later in my journey, reflecting the importance of commitment and faith in God. I am also experienced in community outreach and service-learning, notably with the **Boys & Girls' Club of America**.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="width:100vw; display:flex; justify-content:center; align-items:center; padding:2rem 0; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; background:transparent; border:none;">
+        <a href="index.html#hero" class="inline-block px-12 py-4 rounded-full font-extrabold uppercase tracking-widest transition-all duration-300 text-xl bg-pink-primary text-white hover:bg-purple-accent shadow-lg" style="background-color: #ec4899; color: #fff; border-radius: 9999px;">
+            Return to Home
+        </a>
+    </footer>
+        </a>
+    </div>
+        </a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educator PD: Integrating AI & Biology in STEM</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<style>
+
+	/* --- ANIMATED NEBULA BACKGROUND --- */
+	@keyframes subtle-pan {
+		0% { background-position: 0% 50%; }
+		50% { background-position: 100% 50%; }
+		100% { background-position: 0% 50%; }
+	}
+	body {
+		background-color: #0c0a1a;
+		background-image: url('https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		animation: subtle-pan 240s linear infinite;
+		margin: 0;
+		min-height: 100vh;
+		color: white;
+		font-family: 'Poppins', sans-serif;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	/* --- CORE BACKGROUND & FONT STYLES --- */
+	@keyframes subtle-pan {
+		0% { background-position: 0% 50%; }
+		50% { background-position: 100% 50%; }
+		100% { background-position: 0% 50%; }
+	}
+	body {
+		color: #e0e0e0;
+		font-family: 'Poppins', sans-serif;
+		margin: 0;
+	}
+
+	/* --- PINK SCHOOL COLORS --- */
+	.color-pink-primary { color: #FF00A0; }
+	.color-purple-accent { color: #A64CE2; }
+
+	/* --- CARD STYLES --- */
+	.card {
+		background-color: rgba(12, 10, 26, 0.75);
+		backdrop-filter: blur(12px);
+		border-radius: 1.5rem;
+		padding: 2.5rem;
+		position: relative;
+		overflow: hidden;
+		box-shadow: 0 8px 32px 0 rgba(12, 10, 26, 0.5);
+	}
+	.card::before {
+		content: '';
+		position: absolute;
+		top: -50%;
+		left: -50%;
+		width: 200%;
+		height: 200%;
+		background: conic-gradient(from 90deg at 50% 50%, #f472b6, #8b5cf6, #2dd4bf, #f472b6);
+		border-radius: inherit;
+		z-index: 1;
+	}
+	.card-content {
+		position: relative;
+		z-index: 2;
+		background-color: rgba(12, 10, 26, 0.95);
+		border-radius: calc(1.5rem - 2px);
+		padding: 2.5rem;
+		margin: 2px;
+		height: calc(100% - 4px);
+		width: calc(100% - 4px);
+	}
+	.key-takeaway {
+		color: #d8b4fe;
+		border-top: 1px dashed rgba(255, 255, 255, 0.5);
+	}
+	@keyframes title-gradient-pan {
+		0% { background-position: 0% 50%; }
+		100% { background-position: -200% 50%; }
+	}
+	.glow-title {
+		text-shadow: 0 0 8px rgba(166, 76, 226, 0.7), 0 0 15px rgba(45, 212, 191, 0.5);
+		background: linear-gradient(90deg, #8b5cf6, #2dd4bf, #8b5cf6);
+		background-size: 200% auto;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: title-gradient-pan 6s linear infinite;
+	}
+    </style>
+</head>
+<body>
+
+	<!-- Navigation/Header removed -->
+	<!-- Twinkling Stars -->
+	<!-- Nebula background applied via CSS. Twinkling stars removed. -->
+	<div class="max-w-6xl mx-auto">
+
+        <!-- Title Section -->
+        <header class="text-center mb-16 pt-12">
+			<div class="flex flex-col items-center justify-center min-h-[40vh]">
+				<h1 class="text-4xl md:text-5xl font-extrabold glow-title uppercase tracking-wider text-center">
+					<span class="text-5xl md:text-6xl">Professional Development Strategy</span>
+				</h1>
+			</div>
+            <p class="text-xl md:text-2xl mt-4 color-purple-accent font-semibold">
+				<span class="text-2xl md:text-4xl font-bold">Integrating AI-Powered Learning with Biology for Middle School Girls</span>
+            </p>
+            <div class="mt-8 text-sm bg-white/10 p-4 rounded-lg shadow-lg max-w-lg mx-auto border border-pink-500/20">
+                <p class="font-bold">Target Audience: 6th-8th Grade Teachers & Tech Instructors</p>
+                <p>Program Context: Pink School of STEM Summer Program | Duration: 120 Minutes</p>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+			<!-- Section 1: Introduction & Framework -->
+			<div class="card lg:col-span-1">
+				<div class="card-content flex flex-col justify-between">
+					<div>
+						<h2 class="text-3xl font-bold mb-4 color-purple-accent">
+							<span class="text-4xl mr-2">1</span> Framework & Strategy
+						</h2>
+						<p class="text-gray-200 mb-4">
+							We ensure all educators are grounded in our core philosophy: the critical intersection of <strong>AI, Biology, and Gender-Responsive Teaching</strong> for middle school girls.
+						</p>
+						<ul class="list-disc list-inside space-y-2 text-sm text-gray-300">
+							<li>Welcome, Objectives & PD Context</li>
+							<li>Gender-Responsive STEM Strategies</li>
+							<li>Activity: Quick Think-Pair-Share on comfort and concerns with AI tools.</li>
+						</ul>
+					</div>
+					<div class="key-takeaway mt-4 pt-4 text-sm font-semibold italic">
+						Key Takeaway: <strong>Alignment</strong> with AI, biology, and gender-responsive teaching is non-negotiable for modern STEM education.
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 2: AI Tools in Biology Education -->
+			<div class="card lg:col-span-1">
+				<div class="card-content flex flex-col justify-between">
+					<div>
+						<h2 class="text-3xl font-bold mb-4 color-pink-primary">
+							<span class="text-4xl mr-2">2</span> AI Tools in Biology
+						</h2>
+						<p class="text-gray-200 mb-4">
+							Educators learn to make <strong>abstract concepts tangible</strong> using cutting-edge tools to enhance learning and personalized paths.
+						</p>
+						<h3 class="font-bold mt-3 text-lg color-purple-accent">Recommended Tools:</h3>
+						<ul class="list-disc list-inside text-sm text-gray-300 ml-4">
+							<li>AI-powered <strong>Virtual Labs</strong> & Interactive Simulations</li>
+							<li>Molecular Modeling & Genomics Visualization Platforms</li>
+						</ul>
+						<h3 class="font-bold mt-3 text-lg color-purple-accent">Core Strategy:</h3>
+						<p class="text-sm text-gray-300">Using AI for <strong>personalized learning paths</strong>, interactive assessments, and collaborative project development.</p>
+					</div>
+					<div class="key-takeaway mt-4 pt-4 text-sm font-semibold italic">
+						Key Takeaway: AI tools make abstract <strong>biology concepts tangible</strong> and highly engaging.
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 3: Digital Citizenship & Responsible AI Use -->
+			<div class="card lg:col-span-1">
+				<div class="card-content flex flex-col justify-between">
+					<div>
+						<h2 class="text-3xl font-bold mb-4 color-purple-accent">
+							<span class="text-4xl mr-2">3</span> Digital Citizenship
+						</h2>
+						<p class="text-gray-200 mb-4">
+							We embed ethical reasoning directly into the science. Staff teach students to become <strong>responsible tech users</strong> through critical analysis.
+						</p>
+						<h3 class="font-bold mt-3 text-lg color-pink-primary">Core Components:</h3>
+						<ul class="list-disc list-inside text-sm text-gray-300 ml-4">
+							<li><strong>Ethical AI</strong> Usage & Data Privacy</li>
+							<li>Source Verification & Digital Footprint Awareness</li>
+							<li>Activity: <strong>Scenario Challenge</strong> (Genetic privacy, data collection ethics)</li>
+						</ul>
+					</div>
+					<div class="key-takeaway mt-4 pt-4 text-sm font-semibold italic">
+						Key Takeaway: Embedding digital citizenship creates <strong>responsible tech users</strong> in the next generation.
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 4: Assessment & Standards Alignment -->
+			<div class="card lg:col-span-1">
+				<div class="card-content flex flex-col justify-between">
+					<div>
+						<h2 class="text-3xl font-bold mb-4 color-pink-primary">
+							<span class="text-4xl mr-2">4</span> Assessment & Rigor
+						</h2>
+						<p class="text-gray-200 mb-4">
+							AI is used to <strong>enhance academic rigor</strong> by aligning digital projects and assessments with Louisiana State Standards.
+						</p>
+						<h3 class="font-bold mt-3 text-lg color-purple-accent">Techniques Covered:</h3>
+						<ul class="list-disc list-inside space-y-2 text-sm text-gray-300">
+							<li>AI-powered <strong>Formative Assessments</strong></li>
+							<li>Digital Project-Based Learning (PBL) Reports</li>
+							<li>Using AI for concept review and interactive study guides.</li>
+						</ul>
+						<div class="mt-4">
+							<h4 class="font-bold text-sm color-pink-primary">Activity:</h4>
+							<p class="text-sm text-gray-300">Teachers create a standards-aligned biology assessment incorporating an AI tool.</p>
+						</div>
+					</div>
+					<div class="key-takeaway mt-4 pt-4 text-sm font-semibold italic">
+						Key Takeaway: AI enhances <strong>both learning and assessment</strong> while maintaining academic rigor.
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 5: Action Planning & Support -->
+			<div class="card lg:col-span-2">
+				<div class="card-content flex flex-col justify-between">
+					<div>
+						<h2 class="text-3xl font-bold mb-4 color-purple-accent">
+							<span class="text-4xl mr-2">5</span> Support & Success
+						</h2>
+						<p class="text-gray-200 mb-4">
+							Successful implementation requires <strong>strategic planning and ongoing support</strong>. We ensure staff leave with a clear action plan and resource network.
+						</p>
+						<div class="grid md:grid-cols-2 gap-4">
+							<div>
+								<h3 class="font-bold text-lg color-pink-primary mb-2">Success Metrics:</h3>
+								<ul class="list-disc list-inside text-sm text-gray-300 ml-4">
+									<li>Teacher confidence levels & Student engagement rates.</li>
+									<li>Assessment performance & Digital literacy growth.</li>
+								</ul>
+							</div>
+							<div>
+								<h3 class="font-bold text-lg color-pink-primary mb-2">Ongoing Support:</h3>
+								<ul class="list-disc list-inside text-sm text-gray-300 ml-4">
+									<li><strong>Monthly Check-in Meetings</strong></li>
+									<li>Online Resource Repository & Peer Mentoring System</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="key-takeaway mt-4 pt-4 text-sm font-semibold italic">
+						Key Takeaway: Successful implementation requires <strong>strategic planning and ongoing support</strong> systems.
+					</div>
+				</div>
+			</div>
+        </div>
+
+		<!-- Footer / Special Considerations -->
+		<section class="mt-16 text-center py-8">
+			<div class="card">
+				<div class="card-content">
+					<h3 class="text-2xl font-bold color-pink-primary mb-4 glow-title">Special Considerations for Excellence</h3>
+					<p class="text-lg text-gray-300 max-w-4xl mx-auto">
+						We ensure <strong>Differentiated Support</strong> for all tech comfort levels and maintain a strong focus on engaging traditionally underrepresented groups in STEM, emphasizing <strong>practical, immediately applicable strategies</strong> in every session.
+					</p>
+					<p class="mt-4 text-sm text-gray-400">
+						This PD session is part of a recurring series, continually building expertise in AI-enhanced biology experiences.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<div class="text-center py-8">
+			<a href="index.html#hero" class="inline-block px-10 py-4 rounded-full font-extrabold uppercase tracking-widest transition-all duration-300 text-xl bg-pink-primary text-white hover:bg-purple-accent shadow-lg mt-4">
+				Return to Home
+			</a>
+		</div>
+
+    </div>
+</body>
+
+	<!-- Footer removed -->
+</html>
